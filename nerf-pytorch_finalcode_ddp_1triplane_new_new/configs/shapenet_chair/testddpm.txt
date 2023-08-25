@@ -1,0 +1,35 @@
+expname = ddpm_5020ply
+basedir = /mnt/petrelfs/caoziang/3D_generation/Checkpoint_all/diffusion_shapenet_testmodel27
+datadir = /mnt/lustre/share_data/hongfangzhou.p/shapenet/renders/02958343_view200_r1.2
+triplanepath=/mnt/petrelfs/caoziang/3D_generation/Checkpoint_all/diffusion_shapenet_testmodel27/samples_5000x18x256x256.npz
+ft_path=/mnt/petrelfs/caoziang/3D_generation/Checkpoint_all/shapenet_triplane_new_new/003000.tar
+state=testddpm
+no_batching = True
+train_test=1
+triplanechannel=18
+chunk=16384
+num_instance=1
+batch_size=1
+testvideo=0
+dataset=shapenet
+pos_rate=0.5
+mesh=0
+mesh_mode=.obj
+shape_res=256
+
+use_viewdirs = True
+white_bkgd = True
+lrate_decay = 500
+netdepth=1
+netwidth=128
+box_warp=2.0
+
+N_samples = 128
+N_importance = 128
+N_rand = 8192
+multires_views=10
+
+precrop_iters = 0
+precrop_frac = 0.5
+
+half_res = False

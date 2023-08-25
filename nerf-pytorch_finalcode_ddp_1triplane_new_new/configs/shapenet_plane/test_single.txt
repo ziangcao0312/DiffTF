@@ -1,0 +1,30 @@
+expname = nerf-pytorch_finalcode_ddp_triplane_shapenet_car_stepbystep_new_new_plane
+basedir = /mnt/petrelfs/caoziang/3D_generation/Checkpoint_all
+datadir = /mnt/petrelfs/share_data/hongfangzhou.p/shapenet/renders/02691156_view200_r1.2
+state=test_single
+no_batching = True
+train_test=0.95
+triplanechannel=18
+triplanesize=256
+chunk=4096
+num_instance=0
+batch_size=1
+dataset=shapenet
+
+use_viewdirs = True
+white_bkgd = True
+lrate_decay = 3
+netdepth=1
+netwidth=128
+box_warp=2.0
+
+N_samples = 128
+N_importance = 128
+N_rand = 8192
+multires_views=10
+
+precrop_iters = 0
+precrop_frac = 0.5
+i_weights=3000
+
+half_res = False
