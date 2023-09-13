@@ -24,6 +24,8 @@
 
 :open_book: For more visual results, go checkout our <a href="https://ziangcao0312.github.io/difftf/" target="_blank">project page</a>
 
+## Training & Inference
+Coming Soon!
 
 ## :newspaper_roll: License
 
