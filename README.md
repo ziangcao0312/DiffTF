@@ -19,7 +19,7 @@
 <strong>DiffTF can generate large-vocabulary 3D objects with rich semantics and realistic texture.</strong>
 
 <div style="width: 100%; text-align: center; margin:auto;">
-    <img style="width:100%" src="img/img11.pdf">
+    <img style="width:100%" src="img/img11.png">
 </div>
 
 :open_book: For more visual results, go checkout our <a href="https://ziangcao0312.github.io/difftf/" target="_blank">project page</a>
