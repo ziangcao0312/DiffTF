@@ -23,11 +23,10 @@
 </div>
 
 :open_book: For more visual results, go checkout our <a href="https://ziangcao0312.github.io/difftf_pages/" target="_blank">project page</a>
-
+</div>
 ## Training & Inference
 Coming Soon!
 
-<div align="left">
 If you find DiffTF useful for your work please cite:
 ```
 @article{cao2023difftf,
@@ -37,8 +36,7 @@ If you find DiffTF useful for your work please cite:
   year      = {2023},
 }
 ```
-</div>
-
 ## :newspaper_roll: License
 
 Distributed under the S-Lab License. See `LICENSE` for more information.
+
