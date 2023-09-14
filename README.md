@@ -27,6 +27,7 @@
 ## Training & Inference
 Coming Soon!
 
+<div align="left">
 If you find DiffTF useful for your work please cite:
 ```
 @article{cao2023difftf,
@@ -36,6 +37,7 @@ If you find DiffTF useful for your work please cite:
   year      = {2023},
 }
 ```
+</div>
 
 ## :newspaper_roll: License
 
