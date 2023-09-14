@@ -27,6 +27,16 @@
 ## Training & Inference
 Coming Soon!
 
+If you find DiffTF useful for your work please cite:
+```
+@article{cao2023difftf,
+  author    = {Cao, Ziang and Fang, Zhouhong and Wu, Tong and Pan, Liang and Liu, Ziwei},
+  title     = {Generalizable 3D Diffusion Model with Transformer},
+  journal   = {arxiv},
+  year      = {2023},
+}
+```
+
 ## :newspaper_roll: License
 
 Distributed under the S-Lab License. See `LICENSE` for more information.
