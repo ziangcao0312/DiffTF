@@ -24,7 +24,7 @@
 
 :open_book: For more visual results, go checkout our <a href="https://ziangcao0312.github.io/difftf_pages/" target="_blank">project page</a>
 </div>
-## Training & Inference
+## :Training & Inference
 Coming Soon!
 
 If you find DiffTF useful for your work please cite:
