@@ -13,7 +13,7 @@
     <sup>1</sup>S-Lab, Nanyang Technological University&emsp; <sup>2</sup>The Chinese University of Hong Kong; <sup>3</sup>Shanghai AI Laboratory
 </div>
 
-[Paper](https://arxiv.org/pdf/) | [Project Page](https://ziangcao0312.github.io/difftf_pages/) | [Video](https://youtu.be/8KIZg-cWBeY)
+[Paper](https://arxiv.org/pdf/2309.07920) | [Project Page](https://ziangcao0312.github.io/difftf_pages/) | [Video](https://youtu.be/8KIZg-cWBeY)
 </br>
 
 <strong>DiffTF can generate large-vocabulary 3D objects with rich semantics and realistic texture.</strong>
@@ -32,8 +32,8 @@ If you find DiffTF useful for your work please cite:
 ```
 @article{cao2023difftf,
   author    = {Cao, Ziang and Fang, Zhouhong and Wu, Tong and Pan, Liang and Liu, Ziwei},
-  title     = {Generalizable 3D Diffusion Model with Transformer},
-  journal   = {arxiv},
+  title     = {Large-vocabulary 3D Diffusion Model with Transformer},
+  journal   = {arXiv preprint arXiv:2309.07920},
   year      = {2023},
 }
 ```
