@@ -30,11 +30,11 @@ Coming Soon!
 
 If you find DiffTF useful for your work please cite:
 ```
-@article{cao2023difftf,
-  author    = {Cao, Ziang and Fang, Zhouhong and Wu, Tong and Pan, Liang and Liu, Ziwei},
-  title     = {Large-vocabulary 3D Diffusion Model with Transformer},
-  journal   = {arXiv preprint arXiv:2309.07920},
-  year      = {2023},
+@article{cao2023large,
+  title={Large-Vocabulary 3D Diffusion Model with Transformer},
+  author={Cao, Ziang and Hong, Fangzhou and Wu, Tong and Pan, Liang and Liu, Ziwei},
+  journal={arXiv preprint arXiv:2309.07920},
+  year={2023}
 }
 ```
 ## :newspaper_roll: License
