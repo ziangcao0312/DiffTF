@@ -1,0 +1,34 @@
+expname = difftf_vis
+basedir = ./Checkpoint_all/
+triplanepath=./Checkpoint_all/diffusion_rodin/samples_5000x18x256x256.npz
+ft_path=./3D_generation/omni/003000.tar
+state=testddpm
+no_batching = True
+train_test=1
+triplanechannel=18
+chunk=8000
+num_instance=1
+batch_size=1
+testvideo=0
+dataset=omni
+pos_rate=0.5
+mesh=1
+mesh_mode=.obj
+shape_res=128
+
+use_viewdirs = True
+white_bkgd = False
+lrate_decay = 500
+netdepth=1
+netwidth=128
+box_warp=4.0
+
+N_samples = 128
+N_importance = 128
+N_rand = 8192
+multires_views=10
+
+precrop_iters = 0
+precrop_frac = 0.5
+
+half_res = False

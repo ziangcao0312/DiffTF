@@ -1,0 +1,34 @@
+expname = difftf_share_decoder_omni
+basedir = ./Checkpoint_all
+datadir = path to data
+load_weight =0
+no_batching = True
+train_test=1
+triplanechannel=18
+triplanesize=256
+num_instance=1
+batch_size=1
+num_worker=0
+N_iters=300001
+lrate=1e-2
+dataset=omni
+ddp=1
+pos_rate=0.5
+
+use_viewdirs = True
+white_bkgd = False
+lrate_decay = 100
+netdepth=1
+netwidth=128
+box_warp=4.0
+
+N_samples = 128
+N_importance = 128
+N_rand = 4096
+multires_views=10
+
+precrop_iters = 0
+precrop_frac = 0.5
+i_weights=50000
+
+half_res = False

@@ -1,0 +1,35 @@
+expname = ddpm_car
+basedir = ./Checkpoint_all
+datadir = ./Triplanerecon/shapenet_pose
+triplanepath=./Checkpoint_all/samples_8x18x256x256_0.npz
+ft_path=./Checkpoint_all/shapenet_car/003000.tar
+state=testddpm
+no_batching = True
+train_test=1
+triplanechannel=18
+chunk=16384
+num_instance=1
+batch_size=1
+testvideo=0
+dataset=shapenet
+pos_rate=0.5
+mesh=1
+mesh_mode=.obj
+shape_res=128
+
+use_viewdirs = True
+white_bkgd = True
+lrate_decay = 500
+netdepth=1
+netwidth=128
+box_warp=2.0
+
+N_samples = 128
+N_importance = 128
+N_rand = 8192
+multires_views=10
+
+precrop_iters = 0
+precrop_frac = 0.5
+
+half_res = False
