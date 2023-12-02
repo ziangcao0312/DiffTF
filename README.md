@@ -126,7 +126,7 @@ mpiexec -n 8 python image_train.py
 
 #### I. Sampling triplane using trained diffusion
 
-Our pre-trained model can be founded in [here](https://drive.google.com/drive/folders/1aTAwYoyLp0IQIs6V_nXLg7HiBfrw_kBU?usp=sharing)
+Our pre-trained model can be founded in [difftf_checkpoint/omni](https://entuedu-my.sharepoint.com/:f:/g/personal/ziang_cao_staff_main_ntu_edu_sg/ElQ-NvR_VH5JgxjNQyH_5NEBY9DWked5cy3_LoKpmR2KvA?e=c6T9mQ)
 
 ```python
 python image_sample.py \\
@@ -137,7 +137,7 @@ python image_sample.py \\
 
 #### II. Rendering triplane using shared decoder
 
-Our pre-trained share decoder can be founded in [here](https://drive.google.com/drive/folders/1aTAwYoyLp0IQIs6V_nXLg7HiBfrw_kBU?usp=sharing)
+Our pre-trained share decoder can be founded in  [difftf_checkpoint/triplane](https://entuedu-my.sharepoint.com/:f:/g/personal/ziang_cao_staff_main_ntu_edu_sg/ElQ-NvR_VH5JgxjNQyH_5NEBY9DWked5cy3_LoKpmR2KvA?e=c6T9mQ)
 
 ```python
 python ddpm_vis.py --config ./configs/omni/ddpm.txt
