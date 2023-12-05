@@ -15,10 +15,6 @@
 [Paper](https://arxiv.org/pdf/2309.07920) | [Project Page](https://ziangcao0312.github.io/difftf_pages/) | [Video](https://youtu.be/_Wd81AtqmYY)
 </br>
 
-
-
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fziangcao0312%2FDiffTF&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=visitors&edge_flat=false)](https://hits.seeyoufarm.com)
-
 <strong>DiffTF can generate large-vocabulary 3D objects with rich semantics and realistic texture.</strong>
 
 <div style="width: 100%; text-align: center; margin:auto;">
