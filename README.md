@@ -15,10 +15,11 @@
 <div>
     <a href="https://arxiv.org/pdf/2309.07920" target="_blank">Paper</a> |
     <a href="https://ziangcao0312.github.io/difftf_pages/" target="_blank">Project page</a> |
-    <a href="https://youtu.be/_Wd81AtqmYY" target="_blank">Video</a>
+    <a href="https://youtu.be/_Wd81AtqmYY" target="_blank">Video</a> | 
+    <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fziangcao0312%2FDiffTF&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=visitors&edge_flat=false"/></a>
 </div>
 
- [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fziangcao0312%2FDiffTF&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=visitors&edge_flat=false)](https://hits.seeyoufarm.com)
+
 
 <strong>DiffTF can generate large-vocabulary 3D objects with rich semantics and realistic texture.</strong>
 
