@@ -12,7 +12,12 @@
 <div>
     <sup>1</sup>S-Lab, Nanyang Technological University&emsp; <sup>2</sup>The Chinese University of Hong Kong; <sup>3</sup>Shanghai AI Laboratory
 </div>
-</br>
+<div>
+    <a href="https://arxiv.org/pdf/2309.07920" target="_blank">Paper</a> |
+    <a href="https://ziangcao0312.github.io/difftf_pages/" target="_blank">Project page</a> |
+    <a href="https://youtu.be/_Wd81AtqmYY" target="_blank">Video</a>
+</div>
+
 [Paper](https://arxiv.org/pdf/2309.07920)  |  [Project Page](https://ziangcao0312.github.io/difftf_pages/)  |  [Video](https://youtu.be/_Wd81AtqmYY) | [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fziangcao0312%2FDiffTF&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=visitors&edge_flat=false)](https://hits.seeyoufarm.com)
 
 <strong>DiffTF can generate large-vocabulary 3D objects with rich semantics and realistic texture.</strong>
