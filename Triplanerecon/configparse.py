@@ -26,6 +26,8 @@ def config_parser():
                         help='format of the save files')
     parser.add_argument("--mesh", type=int, default=0, 
                         help='whether to save mesh files')
+    parser.add_argument("--mesh_color", type=int, default=0, 
+                        help='whether to save mesh files with texture')
     parser.add_argument("--shape_res", type=int, default=128, 
                         help='resolution of the generated mesh')
     parser.add_argument("--local_rank", type=int, default=0)

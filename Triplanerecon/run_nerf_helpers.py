@@ -20,6 +20,8 @@ import imageio
 import random
 import time
 import skimage.measure
+import mcubes
+import trimesh
 # Misc
 img2mse = lambda x, y : torch.mean((x - y) ** 2)
 mse2psnr = lambda x : -10. * torch.log(x) / torch.log(torch.Tensor([10.]))
@@ -340,6 +342,81 @@ def generate_mesh(args,path,network_query_fn,network_fn,mesh_mode='.obj'):
     mesh=meshio.read(path)
 
     mesh.write(path[:-4]+args.mesh_mode)
+
+def generate_rgbmesh(args,path,network_query_fn,network_fn,render_kwargs_test):
+    render_kwargs_test['mode']='test'
+    max_batch=1000000
+    device=network_fn.tri_planes.device
+    samples, _, _ = create_samples(N=args.shape_res, voxel_origin=[0, 0, 0], cube_length=args.box_warp * 1)#.reshape(1, -1, 3)
+    samples = samples.to(device=device)
+    sigmas = torch.zeros((samples.shape[0], samples.shape[1], 1), device=device)
+    transformed_ray_directions_expanded = torch.zeros((samples.shape[0], max_batch, 3), device=device)
+    transformed_ray_directions_expanded[..., -1] = -1
+
+    head = 0
+    with tqdm(total = samples.shape[1]) as pbar:
+        with torch.no_grad():
+            while head < samples.shape[1]:
+                sigma = network_query_fn(samples[:, head:head+max_batch], transformed_ray_directions_expanded[:, :samples.shape[1]-head], torch.zeros(1).long().to(device=device), network_fn)[...,3:] 
+                
+                sigmas[:, head:head+max_batch] = sigma
+                head += max_batch
+                pbar.update(max_batch)
+
+    sigmas = sigmas.reshape((args.shape_res, args.shape_res, args.shape_res)).cpu().numpy()
+
+
+    # marching cube
+    vertices, triangles = mcubes.marching_cubes(sigmas, 12)
+    min_bound = np.array([-args.box_warp/2, -args.box_warp/2, -args.box_warp/2])
+    max_bound = np.array([args.box_warp/2, args.box_warp/2, args.box_warp/2])
+    vertices = vertices / (args.shape_res - 1) * (max_bound - min_bound)[None, :] + min_bound[None, :]
+    pt_vertices = torch.from_numpy(vertices).to(device)
+
+    box=4
+    rays_o_list= [
+        
+
+        np.array([box*2, box*2, box*2]),
+        np.array([box*2, box*2, -box*2]),
+        np.array([box*2, -box*2, box*2]),
+        np.array([box*2, -box*2, -box*2]),
+        np.array([-box*2, box*2, box*2]),
+        np.array([-box*2, box*2, -box*2]),
+        np.array([-box*2, -box*2, box*2]),
+        np.array([-box*2, -box*2, -box*2]),
+
+    ]
+    rgb_final = None
+    diff_final = None
+    for rays_o in tqdm(rays_o_list):
+        rays_o = torch.from_numpy(rays_o.reshape(1, 3)).repeat(vertices.shape[0], 1).float().to(device)
+        rays_d = pt_vertices.reshape(-1, 3) - rays_o
+        
+        dist = torch.norm(pt_vertices.reshape(-1, 3) - rays_o, dim=-1).cpu().numpy().reshape(-1)
+        batch_rays=torch.stack([rays_o.unsqueeze(0), rays_d.unsqueeze(0)], 1)
+
+        with torch.no_grad():
+            rgbs,_, _, depth_map,_ = render(chunk=rays_o.shape[0], rays=batch_rays,near=torch.zeros(1,1).to(device=device),far=torch.zeros(1,1).to(device=device)+8, label=torch.zeros(1).long().to(device=device),**render_kwargs_test)
+        rgb = rgbs.reshape(-1, 3).detach().cpu().numpy()
+        depth = depth_map.reshape(-1).detach().cpu().numpy()
+        depth_diff = np.abs(dist - depth)
+
+ 
+
+        if rgb_final is None:
+            rgb_final = rgb.copy()
+            diff_final = depth_diff.copy()
+
+        else:
+            ind = diff_final > depth_diff
+            rgb_final[ind] = rgb[ind]
+            diff_final[ind] = depth_diff[ind]
+
+
+    # export to ply
+    mesh = trimesh.Trimesh(vertices, triangles, vertex_colors=(rgb_final * 255).astype(np.uint8))
+    trimesh.exchange.export.export_mesh(mesh, path[:-4] + '.ply', file_type='ply')
 
 
 def render_path1(batch_rays, chunk, render_kwargs, gt_imgs=None, savedir=None,savedir1=None,savedir2=None,savedir3=None,savedir4=None,near=None,far=None,label=None):

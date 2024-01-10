@@ -14,6 +14,7 @@ testvideo=0
 dataset=shapenet
 pos_rate=0.5
 mesh=1
+mesh_color=0
 mesh_mode=.obj
 shape_res=128
 

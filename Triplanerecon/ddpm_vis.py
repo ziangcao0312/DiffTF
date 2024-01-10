@@ -69,7 +69,12 @@ def testddpm(args):
             if args.mesh:
                 if not os.path.exists(os.path.join(testsavedir+'.ply')) or not os.path.exists(os.path.join(testsavedir+'.obj')):
                     generate_mesh(args,os.path.join(testsavedir+'.ply'),render_kwargs_test['network_query_fn'],render_kwargs_test['network_fn'])
-
+                    if args.mesh_color:
+                        '''
+                        Note: Although we provide a simple function that can convert triplane to mesh with texture, generation performance is impeded during conversion.
+                        We recommend using the volume rendering to get better generation performance.
+                        '''
+                        generate_rgbmesh(args,os.path.join(testsavedir+'.ply'),render_kwargs_test['network_query_fn'],render_kwargs_test['network_fn'],render_kwargs_test)
                     continue
                 else:
                     continue
