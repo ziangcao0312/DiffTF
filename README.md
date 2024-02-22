@@ -127,6 +127,8 @@ mpiexec -n 8 python image_train.py
 
 **Note**: Hyperparameters about training are set in `image_train.py` while hyperparameters about architecture are set in `./improved_diffusion/script_util.py`.
 
+**Note**: Our fitted triplane can be downloaded via this [link](https://entuedu-my.sharepoint.com/:u:/g/personal/ziang_cao_staff_main_ntu_edu_sg/ES5cM7BTwFBGhY51Evy_jNcBH7KiNlf06oPAsGiwp4fPpQ?e=nOEPgD).
+
 ## Inference
 
 #### I. Sampling triplane using trained diffusion
