@@ -127,13 +127,13 @@ mpiexec -n 8 python image_train.py
 
 **Note**: Hyperparameters about training are set in `image_train.py` while hyperparameters about architecture are set in `./improved_diffusion/script_util.py`.
 
-**Note**: Our fitted triplane can be downloaded via this [link](https://entuedu-my.sharepoint.com/:u:/g/personal/ziang_cao_staff_main_ntu_edu_sg/ES5cM7BTwFBGhY51Evy_jNcBH7KiNlf06oPAsGiwp4fPpQ?e=nOEPgD).
+**Note**: Our fitted triplane can be downloaded via this [link](https://entuedu-my.sharepoint.com/:u:/g/personal/ziang001_e_ntu_edu_sg/ES7t444P0UxCjX43vBdp9b4BXAoGwTaC0elK33uRhBZHVQ?e=7PHNub).
 
 ## Inference
 
 #### I. Sampling triplane using trained diffusion
 
-Our pre-trained model can be founded in [difftf_checkpoint/omni](https://entuedu-my.sharepoint.com/:f:/g/personal/ziang_cao_staff_main_ntu_edu_sg/ElQ-NvR_VH5JgxjNQyH_5NEBY9DWked5cy3_LoKpmR2KvA?e=c6T9mQ)
+Our pre-trained model can be founded in [difftf_checkpoint/omni](https://entuedu-my.sharepoint.com/:f:/g/personal/ziang001_e_ntu_edu_sg/Ev851G-N2oRIsdFfwAXc8LsBGY3MZYIuaxgHDAGQkKIb6g?e=DFpUDy)
 
 ```python
 python image_sample.py \\
@@ -144,7 +144,7 @@ python image_sample.py \\
 
 #### II. Rendering triplane using shared decoder
 
-Our pre-trained share decoder can be founded in  [difftf_checkpoint/triplane](https://entuedu-my.sharepoint.com/:f:/g/personal/ziang_cao_staff_main_ntu_edu_sg/ElQ-NvR_VH5JgxjNQyH_5NEBY9DWked5cy3_LoKpmR2KvA?e=c6T9mQ)
+Our pre-trained share decoder can be founded in  [difftf_checkpoint/triplane decoder.zip](https://entuedu-my.sharepoint.com/:f:/g/personal/ziang001_e_ntu_edu_sg/Ev851G-N2oRIsdFfwAXc8LsBGY3MZYIuaxgHDAGQkKIb6g?e=DFpUDy)
 
 ```python
 python ddpm_vis.py --config ./configs/omni/ddpm.txt
